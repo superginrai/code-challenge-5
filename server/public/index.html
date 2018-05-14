@@ -17,24 +17,9 @@
         <input type="text" name="name" ng-model="vm.newMessage.name" placeholder="Your Name?" />
         <input type="text" name="message" ng-model="vm.newMessage.message" placeholder="What's on you mind?" />
         <button ng-click="vm.addMessage(vm.newMessage)">Submit</button>
-        <table>
-            <thead>
-                <tr>
-                    <th>Name</th>
-                    <th>Message</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr ng-repeat="message in vm.messages.data">
-                    <td>
-                        <input ng-model="message.name">
-                    </td>
-                    <td>
-                        <input ng-model="message.message">
-                    </td>
-                </tr>
-            </tbody>
-        </table>
+                <div ng-repeat="message in vm.messages.data">
+                    <h3>{{message.name}}: "{{message.message}}"</h3>
+                </div>
     </div>
 </body>
 
