@@ -1,5 +1,3 @@
-let app = angular.module('MessageApp', []);
-
 app.controller('MessageController', ['$http', function ($http) {
     console.log('Message Controller is doing it');
 
